@@ -1,8 +1,11 @@
-@import 'bootstrap'; /* La hoja de estilos de Bootstrap */
+@import 'bootstrap';
+
+/* La hoja de estilos de Bootstrap */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  height: 75vh;
 
   color-scheme: light dark;
   color: rgb(255, 255, 255);
@@ -14,99 +17,122 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body{
-  background-color:#242424;;
+body {
+  background-color: #242424;
+  height: 100vh;
   color: white;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
 }
 
-.bg-body-tertiary{
+.bg-body-tertiary {
   background-color: transparent !important;
 }
 
-.navbar > .container-fluid{
+.navbar>.container-fluid {
   justify-content: flex-end;
 }
 
-.shadow-svg{
-  filter:drop-shadow(0px 0px 3px #c8c8c8)
+.shadow-svg {
+  filter: drop-shadow(0px 0px 3px #c8c8c8)
 }
 
-.title-menu{
+.title-menu {
   height: 100%;
 
 }
 
 .tabs {
-  display: flex;
-  justify-content: center;
-  width:100%;
-  height:360px;
-  padding:30px 20px;
-  overflow:hidden;
+  width: 100%;
+  height: 360px;
+  padding: 30px 20px;
+  overflow: hidden;
 }
+
 .tab-header {
-  float:left;
-  width:180px;
-  height:100%;
-  padding:50px 0px;
+  height: 100%;
+  padding: 50px 0px;
 }
-.tab-header > div {
-  height:50px;
-  line-height:50px;
-  font-size:16px;
-  font-weight:600;
-  color:#ffffff67;
-  cursor:pointer;
-  padding-left:10px;
+
+.tab-header>div {
+  height: 50px;
+  line-height: 50px;
+  font-size: 5vh;
+  font-weight: 600;
+  color: #ffffff67;
+  cursor: pointer;
+  padding-left: 10px;
+  transition: 400ms;
 }
-.tab-header > div:hover,
-.tab-header > div.active {
+
+.tab-header>div:hover,
+.tab-header>div.active {
   color: white;
   text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6);
 }
+
 .tab-header div i {
-  display:inline-block;
-  margin-left:10px;
-  margin-right:5px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 5px;
 }
+
 .tab-content {
   height: 100%;
-  overflow:hidden;
+  overflow: hidden;
 }
-.tab-content > div > i {
-  display:inline-block;
-  width:50px;
-  height:50px;
-  background:#555;
-  color:#f5f5f5;
-  font-size:25px;
-  font-weight:600;
-  text-align:center;
-  line-height:50px;
-  border-radius:50%;
+
+.tab-content>div>i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #555;
+  color: #f5f5f5;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
 }
-.tab-content > div {
-  text-align:center;
-  padding:40px 20px;
-  top:-200%;
-  transition:all 1000ms ease-in-out;
+
+.tab-content>div {
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .tab-indicator {
   display: flex;
   align-items: center;
-  height:50px;
-  transition:all 500ms ease-in-out;
+  height: 50px;
+  transition: all 750ms ease-in-out;
 }
 
-.tab-border{
-  display: flex;
-    border-right: 1px solid #ccc;
-    flex-direction: row;
-}
-
-.container{
+.tab-border {
   display: flex;
   flex-direction: row;
-  height: 72.812vh;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  display: none;
+}
+
+.fade {
+  transition: opacity 1.15s linear;
+}
+
+.navbar-brand img {
+  width: 1.986vw;
+  height: 5.45vh;
+}
+
+.tab-indicator img {
+  height: 3.314vh;
+  width: 1.655vw;
 }
